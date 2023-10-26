@@ -1,0 +1,17 @@
+# Dada Ki Jay Ho
+
+
+services:
+  node-app:
+    build: .
+    volumes:
+      - ./:/app/
+    ports:
+      - 3000:3000
+  redis-db:
+    image: redis
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
